@@ -27,7 +27,7 @@ npm run dev      # http://localhost:3000 (Turbopack)
 | Command | Description |
 |---------|-------------|
 | `npm run dev` | Start the dev server (Turbopack) |
-| `npm run build` | Production build (Turbopack) |
+| `npm run build` | Production build |
 | `npm start` | Serve the production build |
 | `npm run lint` | Run Next.js lint |
 
