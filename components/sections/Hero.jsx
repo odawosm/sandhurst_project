@@ -50,8 +50,8 @@ export default function Hero() {
             className="mt-8 max-w-xl text-lg leading-relaxed text-cream/75 opacity-0"
             style={{ animation: "fadeUp 1s 0.5s cubic-bezier(0.16,1,0.3,1) forwards" }}
           >
-            Boutique luxury real estate, engineered for superior investor returns
-            and an elevated way of living — across Kenya, East Africa, and the continent.
+            Boutique luxury real estate, engineered for an elevated way of living
+            and superior investor returns across Kenya, East Africa, and the continent.
           </p>
 
           <div
