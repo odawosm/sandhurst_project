@@ -8,7 +8,7 @@ export default function Logo({ tone = "cream", className = "" }) {
   return (
     <Link
       href="/"
-      aria-label={`${company.name} — home`}
+      aria-label={`${company.name}, home`}
       className={`group inline-flex items-center gap-3 ${className}`}
     >
       <Image

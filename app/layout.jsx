@@ -9,8 +9,8 @@ import "./globals.css";
 export const metadata = {
   metadataBase: new URL(company.url),
   title: {
-    default: `${company.name} — ${company.tagline}`,
-    template: `%s — ${company.shortName}`,
+    default: `${company.name} | ${company.tagline}`,
+    template: `%s | ${company.shortName}`,
   },
   description: company.description,
   manifest: "/site.webmanifest",
@@ -23,7 +23,7 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   openGraph: {
-    title: `${company.name} — ${company.tagline}`,
+    title: `${company.name} | ${company.tagline}`,
     description: company.description,
     url: company.url,
     siteName: company.name,

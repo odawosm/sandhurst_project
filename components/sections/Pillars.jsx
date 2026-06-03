@@ -15,7 +15,7 @@ export default function Pillars() {
             </h2>
           </div>
           <p className="max-w-sm text-sm leading-relaxed text-cream/60">
-            We view real estate through the lens of asset performance — curating
+            We view real estate through the lens of asset performance, curating
             environments that solve urban challenges while maximizing the luxury
             factors that drive premium pricing.
           </p>

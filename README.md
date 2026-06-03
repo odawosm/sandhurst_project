@@ -1,18 +1,18 @@
-# Sandhurst Projects Ltd. — Marketing Site
+# Sandhurst Projects Ltd. Marketing Site
 
 > **Built Strong. Living Elevated.**
 
 Marketing website for **Sandhurst Projects Ltd.**, a boutique luxury real estate
 developer rooted in Kenya with a pan-African vision. The site leads with the
-flagship development — **The Woods, Ogango** (Kisumu) — and is built to the
+flagship development, **The Woods, Ogango** (Kisumu), and is built to the
 Sandhurst brand guidelines.
 
 ## Tech stack
 
-- **[Next.js 15](https://nextjs.org/)** — App Router, **Turbopack**
+- **[Next.js 15](https://nextjs.org/)**: App Router, **Turbopack**
 - **React 19**
-- **[Tailwind CSS v4](https://tailwindcss.com/)** — CSS-first theme via `@theme`
-- **[Geist & Geist Mono](https://vercel.com/font)** — loaded with `next/font`
+- **[Tailwind CSS v4](https://tailwindcss.com/)**: CSS-first theme via `@theme`
+- **[Geist & Geist Mono](https://vercel.com/font)**: loaded with `next/font`
 - JavaScript / **JSX** (no TypeScript)
 
 ## Getting started
@@ -31,7 +31,7 @@ npm run dev      # http://localhost:3000 (Turbopack)
 | `npm start` | Serve the production build |
 | `npm run lint` | Run Next.js lint |
 
-> **Note:** Don't run `npm run build` while `npm run dev` is running — both write
+> **Note:** Don't run `npm run build` while `npm run dev` is running, since both write
 > to `.next/` and can corrupt the cache. If you hit a `.next` error, stop all
 > Next processes, `rm -rf .next`, and restart.
 
@@ -51,7 +51,7 @@ components/
   project/                 # Project-detail sections (Hero, Amenities, Investment…)
 lib/
   site.js                  # Company info, nav, pillars, stats (source of truth)
-  projects.js              # Project data — The Woods, Ogango
+  projects.js              # Project data (The Woods, Ogango)
 public/
   brand/                   # Logo marks
   brochure/                # Downloadable project brochure (PDF)
@@ -59,7 +59,7 @@ public/
   favicon.ico, *.png, site.webmanifest
 ```
 
-Both `lib/site.js` and `lib/projects.js` are the single sources of truth — edit
+Both `lib/site.js` and `lib/projects.js` are the single sources of truth; edit
 content there rather than in components.
 
 ## Brand tokens
@@ -69,9 +69,9 @@ Defined in `app/globals.css` (`@theme`) and used as Tailwind utilities
 
 | Token | HEX | Role |
 |-------|-----|------|
-| Night | `#00262B` | Primary dark — backgrounds, headers |
-| Warm Yellow Green | `#DCF69E` | Accent — CTAs, highlights (sparing) |
-| White Chocolate | `#ECE3D6` | Warm neutral — text, light surfaces |
+| Night | `#00262B` | Primary dark: backgrounds, headers |
+| Warm Yellow Green | `#DCF69E` | Accent: CTAs, highlights (sparing) |
+| White Chocolate | `#ECE3D6` | Warm neutral: text, light surfaces |
 | White | `#FFFFFF` | Pure white |
 
 Typography: **Geist Mono** for labels/eyebrows/figures, **Geist** for display & body.
@@ -92,4 +92,4 @@ Optimized for [Vercel](https://vercel.com/). Any Node host that runs
 
 ---
 
-© Sandhurst Projects Ltd. — Real Estate Development.
+© Sandhurst Projects Ltd. Real Estate Development.

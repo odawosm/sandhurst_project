@@ -16,7 +16,7 @@ export default function ContactForm() {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const subject = encodeURIComponent(
-      `[${interest}] Enquiry — ${data.get("name") || "Website"}`,
+      `[${interest}] Enquiry from ${data.get("name") || "Website"}`,
     );
     const body = encodeURIComponent(
       `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\nInterest: ${interest}\n\n${data.get("message")}`,

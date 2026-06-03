@@ -7,7 +7,7 @@ import { company } from "@/lib/site";
 export const metadata = {
   title: "Contact",
   description:
-    "Speak with Sandhurst Projects about investing in or buying at The Woods, Ogango — or partnering on our pan-African pipeline.",
+    "Speak with Sandhurst Projects about investing in or buying at The Woods, Ogango, or partnering on our pan-African pipeline.",
 };
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
       <PageHeader
         eyebrow="Get In Touch"
         title="Let's build something worth standing on."
-        intro="Whether you're investing, buying, or partnering — our team and exclusive selling agent are ready to help."
+        intro="Whether you're investing, buying, or partnering, our team and exclusive selling agent are ready to help."
       />
 
       <section className="py-20 sm:py-24">

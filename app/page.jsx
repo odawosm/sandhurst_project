@@ -21,8 +21,8 @@ export default function HomePage() {
             </div>
             <Reveal className="lg:col-span-8">
               <p className="text-balance font-sans text-2xl font-medium leading-[1.3] tracking-tight text-cream sm:text-3xl">
-                Sandhurst — Old English for a{" "}
-                <span className="text-accent">sandy, wooded hill</span> — carries
+                Sandhurst (Old English for a{" "}
+                <span className="text-accent">sandy, wooded hill</span>) carries
                 the spirit of the Royal Military Academy: strength, trust, and
                 enduring stability. We bring that same discipline to real estate,
                 bridging sophisticated architecture and functional urban living.

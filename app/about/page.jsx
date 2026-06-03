@@ -16,7 +16,7 @@ export default function AboutPage() {
       <PageHeader
         eyebrow="About Sandhurst"
         title="Something solid. Something worth standing on."
-        intro="Sandhurst Projects is a dynamic real estate development firm dedicated to creating high-value, boutique luxury spaces — built on architectural innovation, structural integrity, and investor profitability."
+        intro="Sandhurst Projects is a dynamic real estate development firm dedicated to creating high-value, boutique luxury spaces, built on architectural innovation, structural integrity, and investor profitability."
       />
 
       {/* Name story */}
@@ -28,13 +28,13 @@ export default function AboutPage() {
             </div>
             <Reveal className="lg:col-span-8">
               <p className="text-balance font-sans text-2xl font-medium leading-[1.3] tracking-tight text-cream sm:text-3xl">
-                Sandhurst is a place name of Old English origin — a{" "}
-                <span className="text-accent">sandy, wooded hill</span> — most
+                Sandhurst is a place name of Old English origin, a{" "}
+                <span className="text-accent">sandy, wooded hill</span>, most
                 famously tied to the Royal Military Academy in Berkshire, England.
               </p>
               <p className="mt-8 max-w-2xl text-base leading-relaxed text-cream/60">
                 The connection is deliberate. When you see your name on a Sandhurst
-                property, it should mean what the name has always meant — something
+                property, it should mean what the name has always meant: something
                 solid, something established, something worth standing on. Our roots
                 are in Kenya; our vision is pan-African.
               </p>

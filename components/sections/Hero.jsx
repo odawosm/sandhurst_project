@@ -11,7 +11,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10">
         <Image
           src="/projects/the-woods-ogango/exterior-entrance.jpg"
-          alt="The Woods, Ogango — Sandhurst Projects"
+          alt="The Woods, Ogango, Sandhurst Projects"
           fill
           priority
           sizes="100vw"

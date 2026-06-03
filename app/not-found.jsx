@@ -10,7 +10,7 @@ export default function NotFound() {
           Off the map.
         </h1>
         <p className="mx-auto mt-6 max-w-md text-base leading-relaxed text-cream/60">
-          The page you're looking for isn't here — but our flagship address very much is.
+          The page you're looking for isn't here, but our flagship address very much is.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Button href="/" arrow>

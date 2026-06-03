@@ -9,7 +9,7 @@ import { projects, pipeline } from "@/lib/projects";
 export const metadata = {
   title: "Projects",
   description:
-    "Explore Sandhurst Projects developments — led by The Woods, Ogango, our flagship in Kisumu, with a growing pan-African pipeline.",
+    "Explore Sandhurst Projects developments, led by The Woods, Ogango, our flagship in Kisumu, with a growing pan-African pipeline.",
 };
 
 export default function ProjectsPage() {
@@ -18,7 +18,7 @@ export default function ProjectsPage() {
       <PageHeader
         eyebrow="Developments"
         title="A portfolio built to the Gold Standard."
-        intro="Each Sandhurst development is engineered for asset performance — solving urban challenges while maximizing the luxury factors that drive premium pricing."
+        intro="Each Sandhurst development is engineered for asset performance, solving urban challenges while maximizing the luxury factors that drive premium pricing."
       />
 
       <section className="py-20 sm:py-24">

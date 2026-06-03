@@ -21,7 +21,7 @@ const reasons = [
   {
     no: "02",
     title: "Resilient Infrastructure",
-    body: "Underground water reservoirs, CCTV-ready security, and fire safety protect the asset — and its long-term value.",
+    body: "Underground water reservoirs, CCTV-ready security, and fire safety protect the asset and its long-term value.",
   },
   {
     no: "03",
@@ -50,7 +50,7 @@ export default function InvestorsPage() {
       <PageHeader
         eyebrow="For Investors"
         title="Real estate, through the lens of asset performance."
-        intro="We don't just build structures — we curate environments that solve urban challenges while maximizing the luxury factors that drive premium pricing and superior returns."
+        intro="We don't just build structures; we curate environments that solve urban challenges while maximizing the luxury factors that drive premium pricing and superior returns."
       />
 
       {/* Headline numbers */}
@@ -134,7 +134,7 @@ export default function InvestorsPage() {
             </h2>
             <p className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-cream/65">
               Get full pricing, payment plans, and yield projections for The Woods,
-              Ogango — and first access to our upcoming pan-African pipeline.
+              Ogango, and first access to our upcoming pan-African pipeline.
             </p>
             <div className="mt-11 flex flex-wrap justify-center gap-4">
               <Button href={company.brochure.href} arrow>

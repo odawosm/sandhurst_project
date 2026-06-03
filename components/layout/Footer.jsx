@@ -110,7 +110,7 @@ export default function Footer() {
         {/* Baseline */}
         <div className="flex flex-col gap-4 border-t border-line pt-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="label text-cream/40">
-            © {company.name} — {company.category}
+            © {company.name} · {company.category}
           </p>
           <p className="label text-cream/40">Sole Agent · {company.sellingAgent}</p>
         </div>

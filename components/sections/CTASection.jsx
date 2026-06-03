@@ -6,7 +6,7 @@ import Reveal from "@/components/ui/Reveal";
 export default function CTASection({
   eyebrow = "Partner With Us",
   title = "Curating environments worth standing on.",
-  body = "When you see your name on a Sandhurst property, it means what the name has always meant — something solid, something established, something built to last.",
+  body = "When you see your name on a Sandhurst property, it means what the name has always meant: something solid, something established, something built to last.",
   primary = { href: "/contact", label: "Start a Conversation" },
   secondary = { href: "/investors", label: "Investor Brief" },
 }) {
