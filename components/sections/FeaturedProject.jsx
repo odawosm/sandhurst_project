@@ -47,12 +47,13 @@ export default function FeaturedProject() {
 
           <Reveal delay={120} className="order-1 lg:order-2">
             <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line">
-              <Image
-                src={project.heroImage}
-                alt={`${project.name}, ${project.location}`}
-                fill
-                sizes="(min-width: 1024px) 580px, 100vw"
-                className="object-cover"
+              <video
+                src={project.heroVideo}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-night/40 to-transparent" />
             </div>

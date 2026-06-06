@@ -133,13 +133,9 @@ export default function InvestorsPage() {
               Request the investment brief.
             </h2>
             <p className="mx-auto mt-7 max-w-xl text-base leading-relaxed text-cream/65">
-              Get full pricing, payment plans, and yield projections for The Woods,
-              Ogango, and first access to our upcoming pan-African pipeline.
+              Get full pricing, payment plans, and yield projections our projects and first access to our upcoming pan-African pipeline.
             </p>
             <div className="mt-11 flex flex-wrap justify-center gap-4">
-              <Button href={company.brochure.href} arrow>
-                Download Brochure
-              </Button>
               <Button href="/contact" variant="outline">
                 Speak to the Team
               </Button>

@@ -8,13 +8,13 @@ export default function ProjectHero({ project }) {
   return (
     <section className="relative isolate min-h-[92svh] overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <Image
-          src={project.heroImage}
-          alt={`${project.name}, ${project.location}`}
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
+        <video
+          src={project.heroVideo}
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-night/70 via-night/40 to-night" />
       </div>

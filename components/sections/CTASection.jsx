@@ -25,11 +25,6 @@ export default function CTASection({
             <Button href={primary.href} arrow>
               {primary.label}
             </Button>
-            {secondary && (
-              <Button href={secondary.href} variant="outline">
-                {secondary.label}
-              </Button>
-            )}
           </div>
         </Reveal>
       </Container>
