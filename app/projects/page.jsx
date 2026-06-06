@@ -60,7 +60,7 @@ export default function ProjectsPage() {
       <CTASection
         eyebrow="Register Interest"
         title="Be early on the next Sandhurst address."
-        body="Our developments move from pipeline to sold quickly. Register to receive first access to upcoming releases across East Africa."
+        body="Our developments move from pipeline to sold quickly. Register to receive first access to upcoming releases across Africa."
         primary={{ href: "/contact", label: "Register Interest" }}
         secondary={{ href: "/investors", label: "Investor Brief" }}
       />
