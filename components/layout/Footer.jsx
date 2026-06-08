@@ -24,14 +24,14 @@ export default function Footer() {
               <span className="text-accent">Living Elevated.</span>
             </h2>
           </div>
-          <a
+          {/*<a
             href={company.brochure.href}
             target="_blank"
             rel="noopener noreferrer"
             className="label inline-flex w-fit items-center gap-2.5 rounded-full bg-accent px-7 py-4 text-night transition-colors hover:bg-cream"
           >
             View Brochure ↗
-          </a>
+          </a>*/}
         </div>
 
         {/* Columns */}
