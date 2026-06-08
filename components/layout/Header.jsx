@@ -29,73 +29,77 @@ export default function Header() {
   }, [open]);
 
   return (
-    <header
-      className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
-        scrolled
-          ? "border-b border-line bg-night/85 backdrop-blur-md"
-          : "border-b border-transparent bg-transparent"
-      }`}
-    >
-      <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-6 sm:px-8 lg:px-12">
-        <Logo />
+    <>
+      <header
+        className={`fixed inset-x-0 top-0 z-50 transition-all duration-500 ${
+          scrolled
+            ? "border-b border-line bg-night/85 backdrop-blur-md"
+            : "border-b border-transparent bg-transparent"
+        }`}
+      >
+        <div className="mx-auto flex h-20 w-full max-w-[1280px] items-center justify-between px-6 sm:px-8 lg:px-12">
+          <Logo />
 
-        <nav className="hidden items-center gap-9 md:flex">
-          {nav.map((item) => {
-            const active = pathname === item.href || pathname.startsWith(item.href + "/");
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`label transition-colors duration-300 ${
-                  active ? "text-accent" : "text-cream/70 hover:text-cream"
-                }`}
-              >
-                {item.label}
-              </Link>
-            );
-          })}
-        </nav>
+          <nav className="hidden items-center gap-9 md:flex">
+            {nav.map((item) => {
+              const active = pathname === item.href || pathname.startsWith(item.href + "/");
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`label transition-colors duration-300 ${
+                    active ? "text-accent" : "text-cream/70 hover:text-cream"
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              );
+            })}
+          </nav>
 
-        <div className="hidden md:block">
-          <a
-            href={company.brochure.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="label rounded-full border border-line-strong px-5 py-2.5 text-cream transition-colors duration-300 hover:border-accent hover:text-accent"
-          >
-            Brochure ↗
-          </a>
-        </div>
-
-        <button
-          type="button"
-          aria-label={open ? "Close menu" : "Open menu"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-          className="relative z-50 flex h-10 w-10 items-center justify-center md:hidden"
-        >
-          <span className="sr-only">Menu</span>
-          <div className="flex flex-col gap-[5px]">
-            <span
-              className={`h-px w-6 bg-cream transition-all duration-300 ${
-                open ? "translate-y-[6px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`h-px w-6 bg-cream transition-all duration-300 ${
-                open ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`h-px w-6 bg-cream transition-all duration-300 ${
-                open ? "-translate-y-[6px] -rotate-45" : ""
-              }`}
-            />
+          <div className="hidden md:block">
+            <a
+              href={company.brochure.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="label rounded-full border border-line-strong px-5 py-2.5 text-cream transition-colors duration-300 hover:border-accent hover:text-accent"
+            >
+              Brochure ↗
+            </a>
           </div>
-        </button>
-      </div>
 
-      {/* Mobile overlay */}
+          <button
+            type="button"
+            aria-label={open ? "Close menu" : "Open menu"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+            className="relative z-50 flex h-10 w-10 items-center justify-center md:hidden"
+          >
+            <span className="sr-only">Menu</span>
+            <div className="flex flex-col gap-[5px]">
+              <span
+                className={`h-px w-6 bg-cream transition-all duration-300 ${
+                  open ? "translate-y-[6px] rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`h-px w-6 bg-cream transition-all duration-300 ${
+                  open ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`h-px w-6 bg-cream transition-all duration-300 ${
+                  open ? "-translate-y-[6px] -rotate-45" : ""
+                }`}
+              />
+            </div>
+          </button>
+        </div>
+      </header>
+
+      {/* Mobile overlay — kept OUTSIDE <header> on purpose. The header's
+          backdrop-blur establishes a containing block that would otherwise
+          trap this fixed layer inside the 80px bar, dropping its background. */}
       <div
         className={`fixed inset-0 z-40 flex flex-col bg-night px-6 pt-28 transition-all duration-500 md:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
@@ -122,6 +126,6 @@ export default function Header() {
           View Brochure ↗
         </a>
       </div>
-    </header>
+    </>
   );
 }
