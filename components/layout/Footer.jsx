@@ -31,7 +31,8 @@ export default function Footer() {
             alt={`${company.name} logo`}
             width={1851}
             height={1205}
-            className="h-auto w-56 self-start opacity-95 sm:w-64 lg:w-72 lg:self-end"
+            //className="h-auto w-40 self-start opacity-95 sm:w-48 lg:w-56 lg:self-end"
+            className="h-auto w-32 self-start opacity-95 sm:w-40 lg:w-44 lg:self-end"
           />
         </div>
 
