@@ -11,13 +11,13 @@ export default function Footer() {
         {/* Big tagline + full logo lockup on the far right */}
         <div className="flex flex-col gap-10 border-b border-line pb-14 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
-            <Image
+            {/*<Image
               src="/brand/mark-cream.png"
               alt=""
               width={48}
               height={48}
               className="mb-7 h-11 w-11 opacity-90"
-            />
+            />*/}
             <h2 className="text-balance text-4xl font-medium leading-[1.05] tracking-tight text-cream sm:text-5xl">
               Built Strong.
               <br />
