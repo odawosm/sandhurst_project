@@ -46,14 +46,14 @@ export default function FeaturedProject() {
           </Reveal>
 
           <Reveal delay={120} className="order-1 lg:order-2">
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl border border-line">
+            <div className="relative aspect-video overflow-hidden rounded-2xl border border-line">
               <video
                 src={project.heroVideo}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-center"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-night/40 to-transparent" />
             </div>

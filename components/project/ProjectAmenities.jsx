@@ -1,8 +1,11 @@
+import Image from "next/image";
+
 import Container from "@/components/ui/Container";
 import Eyebrow from "@/components/ui/Eyebrow";
 import Reveal from "@/components/ui/Reveal";
 
 export default function ProjectAmenities({ project }) {
+  const highlights = project.amenityHighlights ?? [];
   return (
     <section className="border-t border-line py-24 sm:py-28">
       <Container>
@@ -26,6 +29,31 @@ export default function ProjectAmenities({ project }) {
             </Reveal>
           ))}
         </div>
+
+        {highlights.length > 0 && (
+          <div className="mt-4 grid gap-4 sm:grid-cols-2">
+            {highlights.map((h, i) => (
+              <Reveal
+                key={h.src}
+                delay={i * 100}
+                className="group relative aspect-[16/10] overflow-hidden rounded-2xl border border-line"
+              >
+                <Image
+                  src={h.src}
+                  alt={h.caption}
+                  fill
+                  quality={90}
+                  sizes="(min-width: 640px) 50vw, 100vw"
+                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-night/80 via-night/10 to-transparent" />
+                <span className="label absolute bottom-5 left-5 right-5 text-cream">
+                  {h.caption}
+                </span>
+              </Reveal>
+            ))}
+          </div>
+        )}
       </Container>
     </section>
   );

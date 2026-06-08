@@ -28,6 +28,17 @@ export default function ProjectInvestment({ project }) {
                 Book a Viewing
               </Button>
             </div>
+            {project.elevations && (
+              <a
+                href={project.elevations.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="label mt-6 inline-flex items-center gap-2 text-cream/55 transition-colors hover:text-accent"
+              >
+                <span className="h-px w-6 bg-current" />
+                Architectural elevations (PDF) ↗
+              </a>
+            )}
           </div>
           <dl className="lg:col-span-7">
             {rows.map(([k, v]) => (

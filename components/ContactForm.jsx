@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { company } from "@/lib/site";
 
-const interests = ["Invest", "Buy / Rent", "Partnership", "General"];
+const interests = ["Invest", "Partnership", "General"];
 
 const field =
   "w-full rounded-xl border border-line bg-night-700/30 px-4 py-3.5 text-cream placeholder:text-cream/35 transition-colors focus:border-accent";

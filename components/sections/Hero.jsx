@@ -10,10 +10,11 @@ export default function Hero() {
       {/* Background render */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/projects/the-woods-ogango/exterior-entrance.jpg"
+          src="/projects/the-woods-ogango/woods-exterior-front.jpg"
           alt="The Woods, Ogango — Sandhurst Projects"
           fill
           priority
+          quality={90}
           sizes="100vw"
           className="object-cover"
         />

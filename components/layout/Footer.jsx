@@ -8,7 +8,7 @@ export default function Footer() {
   return (
     <footer className="relative overflow-hidden border-t border-line bg-night">
       <Container className="py-20">
-        {/* Big tagline */}
+        {/* Big tagline + full logo lockup on the far right */}
         <div className="flex flex-col gap-10 border-b border-line pb-14 lg:flex-row lg:items-end lg:justify-between">
           <div className="max-w-2xl">
             <Image
@@ -24,14 +24,15 @@ export default function Footer() {
               <span className="text-accent">Living Elevated.</span>
             </h2>
           </div>
-          {/*<a
-            href={company.brochure.href}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="label inline-flex w-fit items-center gap-2.5 rounded-full bg-accent px-7 py-4 text-night transition-colors hover:bg-cream"
-          >
-            View Brochure ↗
-          </a>*/}
+
+          {/* Full brand logo lockup (mark + wordmark) — exact artwork from the brand guide */}
+          <Image
+            src="/brand/logo-lockup-cream.png"
+            alt={`${company.name} logo`}
+            width={1851}
+            height={1205}
+            className="h-auto w-56 self-start opacity-95 sm:w-64 lg:w-72 lg:self-end"
+          />
         </div>
 
         {/* Columns */}
