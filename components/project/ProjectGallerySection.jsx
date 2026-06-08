@@ -7,7 +7,7 @@ export default function ProjectGallerySection({ project }) {
     <section className="border-t border-line py-20 sm:py-24">
       <Container>
         <Eyebrow className="mb-10">Gallery</Eyebrow>
-        <ProjectGallery images={project.gallery} />
+        <ProjectGallery images={project.gallery} video={project.video} />
       </Container>
     </section>
   );
