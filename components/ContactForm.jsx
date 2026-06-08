@@ -3,13 +3,13 @@
 import { useState } from "react";
 import { company } from "@/lib/site";
 
-const interests = ["Invest", "Partnership", "General"];
+const interests = ["Buying", "Investing", "General"];
 
 const field =
   "w-full rounded-xl border border-line bg-night-700/30 px-4 py-3.5 text-cream placeholder:text-cream/35 transition-colors focus:border-accent";
 
 export default function ContactForm() {
-  const [interest, setInterest] = useState("Invest");
+  const [interest, setInterest] = useState("Buying");
   const [sent, setSent] = useState(false);
 
   function handleSubmit(e) {
