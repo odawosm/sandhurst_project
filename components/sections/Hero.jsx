@@ -10,8 +10,8 @@ export default function Hero() {
       {/* Background render */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/projects/the-woods-ogango/woods-exterior-front.jpg"
-          alt="The Woods, Ogango — Sandhurst Projects"
+          src="/projects/green-hero.avif"
+          alt="Building exterior with greenery and blue sky - Hero background image for Sandhurst Projects Ltd home page."
           fill
           priority
           quality={90}
