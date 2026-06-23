@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { company } from "@/lib/site";
+import { useActionState, useState } from "react";
+import { submitContactForm } from "@/app/contact/actions";
 
 const interests = ["Buying", "Investing", "General"];
 
@@ -10,25 +10,25 @@ const field =
 
 export default function ContactForm() {
   const [interest, setInterest] = useState("Buying");
-  const [sent, setSent] = useState(false);
+  const [state, formAction, isPending] = useActionState(submitContactForm, {});
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    const data = new FormData(e.currentTarget);
-    const subject = encodeURIComponent(
-      `[${interest}] Enquiry from ${data.get("name") || "Website"}`,
+  if (state.success) {
+    return (
+      <div className="rounded-2xl border border-line bg-night-700/20 p-10 text-center">
+        <p className="label mb-3 text-accent">Message sent</p>
+        <p className="text-base leading-relaxed text-cream/70">
+          Thank you — we&apos;ll be in touch shortly.
+        </p>
+      </div>
     );
-    const body = encodeURIComponent(
-      `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\nInterest: ${interest}\n\n${data.get("message")}`,
-    );
-    window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
-    setSent(true);
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-5">
+    <form action={formAction} className="flex flex-col gap-5">
+      <input type="hidden" name="interest" value={interest} />
+
       <div>
-        <label className="label mb-3 block text-cream/45">I'm interested in</label>
+        <label className="label mb-3 block text-cream/45">I&apos;m interested in</label>
         <div className="flex flex-wrap gap-2.5">
           {interests.map((opt) => (
             <button
@@ -60,19 +60,18 @@ export default function ContactForm() {
         className={`${field} resize-none`}
       />
 
+      {state.error && <p className="label text-red-400">{state.error}</p>}
+
       <button
         type="submit"
-        className="group mt-2 inline-flex items-center justify-center gap-2.5 rounded-full bg-accent px-7 py-4 font-mono text-xs uppercase tracking-[0.18em] text-night transition-colors hover:bg-cream"
+        disabled={isPending}
+        className="group mt-2 inline-flex items-center justify-center gap-2.5 rounded-full bg-accent px-7 py-4 font-mono text-xs uppercase tracking-[0.18em] text-night transition-colors hover:bg-cream disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {sent ? "Opening your email…" : "Send Enquiry"}
-        <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        {isPending ? "Sending…" : "Send Enquiry"}
+        {!isPending && (
+          <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
+        )}
       </button>
-
-      {sent && (
-        <p className="label text-accent">
-          Your email client should open with the message ready to send.
-        </p>
-      )}
     </form>
   );
 }
