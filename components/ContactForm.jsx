@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { company } from "@/lib/site";
 
 const interests = ["Buying", "Investing", "General"];
 
@@ -10,42 +11,18 @@ const field =
 export default function ContactForm() {
   const [interest, setInterest] = useState("Buying");
   const [sent, setSent] = useState(false);
-  const [error, setError] = useState(null);
-  const [loading, setLoading] = useState(false);
 
-  async function handleSubmit(e) {
+  function handleSubmit(e) {
     e.preventDefault();
-    setLoading(true);
-    setError(null);
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-
-    try {
-      const res = await fetch("/api/send-email", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: data.get("name"),
-          email: data.get("email"),
-          phone: data.get("phone"),
-          interest,
-          message: data.get("message"),
-        }),
-      });
-
-      if (!res.ok) {
-        const json = await res.json();
-        throw new Error(json.error || "Failed to send");
-      }
-
-      setSent(true);
-      form.reset();
-    } catch (err) {
-      setError(err.message);
-    } finally {
-      setLoading(false);
-    }
+    const data = new FormData(e.currentTarget);
+    const subject = encodeURIComponent(
+      `[${interest}] Enquiry from ${data.get("name") || "Website"}`,
+    );
+    const body = encodeURIComponent(
+      `Name: ${data.get("name")}\nEmail: ${data.get("email")}\nPhone: ${data.get("phone")}\nInterest: ${interest}\n\n${data.get("message")}`,
+    );
+    window.location.href = `mailto:${company.email}?subject=${subject}&body=${body}`;
+    setSent(true);
   }
 
   return (
@@ -85,21 +62,16 @@ export default function ContactForm() {
 
       <button
         type="submit"
-        disabled={loading}
-        className="group mt-2 inline-flex items-center justify-center gap-2.5 rounded-full bg-accent px-7 py-4 font-mono text-xs uppercase tracking-[0.18em] text-night transition-colors hover:bg-cream disabled:opacity-50 disabled:cursor-not-allowed"
+        className="group mt-2 inline-flex items-center justify-center gap-2.5 rounded-full bg-accent px-7 py-4 font-mono text-xs uppercase tracking-[0.18em] text-night transition-colors hover:bg-cream"
       >
-        {loading ? "Sending…" : sent ? "Sent!" : "Send Enquiry"}
+        {sent ? "Opening your email…" : "Send Enquiry"}
         <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
       </button>
 
       {sent && (
         <p className="label text-accent">
-          Thank you! We've received your enquiry and will be in touch soon.
+          Your email client should open with the message ready to send.
         </p>
-      )}
-
-      {error && (
-        <p className="label text-red-400">Error: {error}</p>
       )}
     </form>
   );
