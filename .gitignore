@@ -28,6 +28,7 @@ yarn-error.log*
 # editor / local agent context
 CLAUDE.md
 .claude/
+PRODUCT.md
 
 # internal working materials (production copies live in /public)
 /assets/
