@@ -4,6 +4,7 @@ import Eyebrow from "@/components/ui/Eyebrow";
 import Reveal from "@/components/ui/Reveal";
 import ProjectCard from "@/components/ProjectCard";
 import CTASection from "@/components/sections/CTASection";
+import Waitlist from "@/components/sections/Waitlist";
 import { projects, pipeline } from "@/lib/projects";
 
 export const metadata = {
@@ -56,6 +57,13 @@ export default function ProjectsPage() {
           </div>
         </Container>
       </section>
+
+      <Waitlist
+        source="Projects listing"
+        eyebrow="Early Access"
+        title="First access to the pipeline."
+        body="Pipeline developments are offered to the waitlist before they go public. Leave your email and we'll reach out when the next release opens."
+      />
 
       <CTASection
         eyebrow="Register Interest"
