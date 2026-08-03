@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 
 import CTASection from "@/components/sections/CTASection";
+import Waitlist from "@/components/sections/Waitlist";
 import ProjectHero from "@/components/project/ProjectHero";
 import ProjectOverview from "@/components/project/ProjectOverview";
 import ProjectGallerySection from "@/components/project/ProjectGallerySection";
@@ -41,6 +42,13 @@ export default async function ProjectPage({ params }) {
       <ProjectSecurity project={project} />
       <ProjectInvestment project={project} />
       <ProjectTeam project={project} />
+
+      <Waitlist
+        source={`${project.name}, ${project.location}`}
+        eyebrow="Early Access"
+        title={`Join the ${project.name} waitlist.`}
+        body="Remaining units are released in phases. Leave your email and we'll notify you the moment the next phase opens."
+      />
 
       <CTASection
         eyebrow="The Woods, Ogango"

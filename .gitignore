@@ -32,6 +32,7 @@ PRODUCT.md
 
 # internal working materials (production copies live in /public)
 /assets/
+README.internal.md
 /docs/
 
 # vercel
